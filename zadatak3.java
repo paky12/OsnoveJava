@@ -36,7 +36,7 @@ public class Main {
                     System.out.println("Friday");
                     break;
                 case 6:
-                    System.out.printf("Saturday");
+                    System.out.println("Saturday");
                     break;
                 default:
                     if(user_input < 0){
