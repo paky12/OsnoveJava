@@ -7,16 +7,14 @@ public class Main {
 
         Map<String, String> bookMap = new HashMap<>();
 
-        boolean run = true;
         String bookName, bookAuthor;
 
         System.out.println("Enter your fav book and auth. Enter 'q' to stop");
-        while(run){
+        while(true){
             System.out.println("Enter a book name: ");
             bookName = input.nextLine();
             if (bookName.equals("q")){
                 System.out.println("exiting....");
-                run = false;
                 break;
             }
 
