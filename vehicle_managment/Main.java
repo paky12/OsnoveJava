@@ -10,7 +10,19 @@ public class Main {
         VehicleManagerImpl vehicleManager = new VehicleManagerImpl();
         Scanner input = new Scanner(System.in);
         Logger logger = Logger.getLogger(Main.class.getName());
+        /***
+         * Vehicles added permamently for testing purpose
+         */
+        Vehicle vehicle1 = new Car("Toyota", "Yaris", 1998, "qwer123", "Red",
+                "Benzin", "Coupe", 3);
+        Vehicle vehicle2 = new Truck("Tesla", "Cybertruck", 2023, "yxcv4321", "Black",
+                "Electric/Diesel", 300);
+        vehicleManager.addVehicle(vehicle1);
+        vehicleManager.addVehicle(vehicle2);
 
+        /***
+         * Start of the main program
+         */
         while (true) {
             System.out.println("------------------------");
             System.out.println("1. ADD new vehicle to the fleet");
@@ -42,7 +54,7 @@ public class Main {
                                 String color = input.nextLine();
                                 System.out.println("Enter fuel type :> ");
                                 String fueltype = input.nextLine();
-                                System.out.println("Enter towing capacity :> ");
+                                System.out.println("Enter towing capacity in litres :> ");
                                 int towingCapacity = input.nextInt();
                                 input.nextLine();
 
@@ -151,7 +163,7 @@ public class Main {
                         System.exit(0);
                         break;
                     default:{
-                        System.out.println("Invalid input");
+                        System.out.println("Invalid input enter number 1-5");
                     }
             }
 
@@ -159,6 +171,8 @@ public class Main {
                 System.out.println("Invalid input enter number 1-5");
                 input.nextLine();
             }
+
+
 
             }
         }
